@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+/* html{
+    overflow-x: hidden;
+} */
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(255,255,255), rgb(254,215,173));
+}
+nav{
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+}
+.nav-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    color: black;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.logo span{
+    color: rgb(109,67, 0);
+    text-shadow: 0 0 10px rgb(109,67, 0);
+}
+.hamburg, .cancel{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: black;
+    font-size: 2rem;
+    display: none;
+}
+.nav-container .links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+.nav-container .links a{
+    position: relative;
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    transform: 0.3s linear;
+}
+.nav-container .links a::before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(109,67, 0);
+    transition: 0.2s linear;
+}
+.nav-container .links a:hover::before{
+    width: 100%;
+}
+.nav-container .contact-btn{
+    background-color: transparent;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 2px solid rgb(109,67, 0);
+    transition: 0.2s linear;
+}
+.nav-container .contact-btn a{
+    color: white;
+    transition: 0.3s linear;
+}
+.nav-container .contact-btn:hover, .nav-container .contact-btn:hover a{
+    background-color: rgb(109,67, 0);
+    color: white;
+}
+.nav-container .links a:hover{
+    color: rgb(109,67, 0);
+}
+.dropdown{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: brightness(40%) blur(3px);
+    box-shadow: 0 0 20px black;
+    transition: 0.2s linear;
+}
+.dropdown .links a{
+    color: white;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+.dropdown .links a:hover{
+    background-color: rgb(109,67, 0);
+}
+section{
+    width: 100%;
+    height: 90vh;
+}
+.main-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.main-container .image{
+    z-index: -1;
+    width: 50%;
+}
+.main-container .image img{
+    width: 80%;
+}
+.main-container .content{
+    color: black;
+    width: 40%;
+    min-height: 100px;
+}
+.content h1{
+    font-size: clamp(1rem, 2rem + 5vw, 3rem);
+}
+.content h1 span{
+    color: rgb(109,67, 0);
+    text-shadow: 0 0 10px rgb(109,67, 0);
+}
+.content .typewriter{
+    font-weight: 600;
+    font-size: clamp(1rem, 1rem + 5vw, 2rem);
+}
+.content .typewriter span{
+    color: rgb(109,67, 0);
+    font-size: 2.5rem;
+    text-shadow: 0 0 5px rgb(109,67, 0);
+    position: relative;
+    transition: 0.3s linear;
+}
+.typewriter span::before{
+    content: "Developer";
+    animation: words 15s infinite;
+}
+.typewriter span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    animation:  cursor 0.6s linear infinite;
+}
+@keyframes cursor {
+    to{
+        border-left: 3px solid #b74b4b;
+    }
+}
+@keyframes words {
+    0%, 33%{
+        content: "Developer";
+    }
+    34%, 66%{
+        content: "Designer";
+    }
+    67%, 100%{
+        content: "Youtuber";
+    }
+}
+.content p{
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
+    margin: 10px 0;
+}
+.social-links i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color:transparent;
+    border: 0.2rem solid rgb(109,67, 0);
+    border-radius: 50%;
+    color:rgb(109,67, 0);
+    margin: 5px 10px;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+}
+.social-links i:hover{
+    scale: 1.3;
+    color: white;
+    background-color: rgb(109,67, 0);
+    filter: drop-shadow(0 0 10px rgb(109,67,0));
+}
+.content button{
+    width: 40%;
+    height: 6vh;
+    margin: 30px;
+    background-color: rgb(109,67, 0);
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 100%;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+.content button:hover{
+ scale: 1.1;
+ color: rgb(109,67, 0);
+ border: 2px solid rgb(109,67, 0);
+ background-color: transparent;
+ font-weight: 700;
+ box-shadow: 0 0 40px rgb(109,67, 0);
+}
+@media (max-width:884px) {
+    body{
+        overflow-y: visible;
+    }
+    nav .logo{
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+    .main-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-container .links{
+        display: none;
+    }
+    .hamburg,.cancel{
+        display: block;
+    }
+    .main-container .content{
+        width: 80%;
+    }
+    .social-links i{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+    .cancel{
+        color: white;
+    }
+    .main-container .image{
+        width: 80%;
+        margin-bottom: 0px;
+    }
+}
+
+/* Projects Section */
+.projects-container {
+
+  padding: 50px 10%; /* Add padding to create space from the edges */
+  color: #333; /* Dark text color for readability */
+  min-height: 60vh; /* Ensure the section takes up enough space */
+}
+
+.projects-container h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: -15px;
+  margin-bottom: 30px;
+  color: #333; /* Dark text color */
+  font-family: 'Arial', sans-serif; /* Set a clean font */
+}
+
+.project-card {
+  background-color: white; /* White background for each project card */
+  border-radius: 8px; /* Slightly rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  padding: 20px;
+  margin-bottom: 20px; /* Space between cards */
+  transition: transform 0.3s ease-in-out; /* Smooth transform on hover */
+}
+
+.project-card:hover {
+  transform: translateY(-10px); /* Lift the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.project-card h3 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #b74b4b; /* Highlighted title with blue color */
+  margin-bottom: 15px;
+  font-family: 'Arial', sans-serif;
+}
+
+.project-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555; /* Slightly lighter gray text for the description */
+}
+
+.project-card a {
+  color: #b74b4b; /* Set link color to blue */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+@media screen and (max-width: 768px) {
+  .projects-container {
+      padding: 50px 5%; /* Less padding on smaller screens */
+  }
+
+  .project-card {
+      padding: 15px; /* Less padding on smaller screens */
+  }
+
+  .projects-container h2 {
+      font-size: 28px; /* Smaller title size on mobile */
+  }
+
+  .project-card h3 {
+      font-size: 24px; /* Smaller title size on mobile */
+  }
+}
+/* Skills Section */
+.skills-section {
+  padding: 50px 10%;
+  color: #333;
+  min-height: 60vh;
+}
+
+.skills-section h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  text-align: center;
+}
+
+.skill-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 250px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card i {
+  font-size: 48px;
+  margin-bottom: 15px;
+  color: #b74b4b; /* Blue color for icons */
+}
+
+.skill-card h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.skill-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+@media screen and (max-width: 768px) {
+  .skills-section {
+      padding: 50px 5%;
+  }
+
+  .skill-card {
+      width: 100%;
+      padding: 20px;
+  }
+
+  .skills-section h2 {
+      font-size: 28px;
+  }
+
+  .skill-card h3 {
+      font-size: 20px;
+  }
+}
+/* Contact Section */
+.contact-section {
+  padding: 60px 0; /* Add top and bottom padding */
+  text-align: center; /* Center the content */
+}
+
+.contact-section h2 {
+  font-size: 36px;
+  color: #333; /* Dark text color for headings */
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle text shadow for depth */
+}
+
+.contact-section p {
+  font-size: 18px;
+  color: #b74b4b; /* Lighter color for paragraph text */
+  margin-bottom: 20px;
+}
+
+.contact-section .btn {
+  display: inline-block;
+  background-color: #b74b4b; /* Button background color */
+  color: white;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.contact-section .btn:hover {
+  background-color: #b74b4b; /* Darken the button on hover */
+}
+
+.contact-section h5{
+  margin-right: 10px; /* Space between the icon and the text */
+  color:#b74b4b ;
+}
+
+.contact-section .text-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-section .btn-light {
+  background-color: #f8f9fa; /* Light button background */
+  color: #b74b4b; /* Button text color */
+}
+
+.contact-section .btn-light:hover {
+  background-color: #e2e6ea; /* Darker background on hover */
+  color: #b74b4b; /* Change text color on hover */
+}
+
+.contact-section i {
+  margin-right: 10px; /* Space between the icon and the text */
+  vertical-align: middle; /* Align the icon with the middle of the text */
+}
+
+.contact-section p {
+  font-size: 18px;
+  color: #555; /* Lighter color for paragraph text */
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center; /* Center the text and icon horizontally */
+  align-items: center; /* Align the text and icon vertically */
+}
+
+.contact-section .text-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-section .btn-light {
+  background-color: #f8f9fa; /* Light button background */
+  color: #b74b4b; /* Button text color */
+}
+
+.contact-section .btn-light:hover {
+  background-color: #e2e6ea; /* Darker background on hover */
+  color: #b74b4b; /* Change text color on hover */
+}

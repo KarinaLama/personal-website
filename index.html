@@ -1,134 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karina Lama</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  <title>Karina Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    /* Ensure the body takes the full height of the viewport and allows scrolling */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-y: auto;
+      /* Allows scrolling when content exceeds the viewport */
+    }
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    /* Main section to ensure it takes full height and remains scrollable */
+    .main-section {
+      min-height: 100vh;
+      /* Ensure the section covers the full height of the viewport */
+      padding-bottom: 100px;
+      /* Add some bottom padding for the content */
+    }
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-        }
-        header {
-            background-color: #807878;
-            color: #2b2424;
-            padding: 150px 0;
-            height: auto;
-        }
-        row {
-            margin-left: 5;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            font-style: initial;
-            text-shadow: 4px 4px 4px rgba(24, 16, 16, 0.5);
-        }
-        header p {
-            margin-top: 5px;
-            font-size: 1.2rem;
-           
-        }
-        nav {
-            margin-top: 20px;
-        }
-        section {
-            padding: 40px 0;
-            background-color: #fff;
-        }
-        .photo-gallery img {
-            width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .github-link {
-           color:rgb(90, 85, 116);
-           text-decoration: none; 
-         }
-         .shadow {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    .projects-container {
+      margin-top: -10%;
+      /* Space between sections */
+    }
 
-        footer {
-            background-color: #202020;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-    </style>
+    .skills-section {
+      margin-top: 30%;
+    }
+
+    .contact-section {
+      margin-top: 50%;
+    }
+
+    /* Optional: Smooth scrolling for the page */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
+
 <body>
-    <header class="text-center">
-        <div class="container">
-            <h1>Karina Lama</h1>
-            <p class="lead">Web Developer</p>
-            <nav>
-                <a class="btn btn-outline-light" href="#about">About</a>
-                <a class="btn btn-outline-light" href="#portfolio">Portfolio</a>
-                <a class="btn btn-outline-light" href="#contact">Contact</a>
-            </nav>
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+        <span>karina</span>
+      </div>
+      <div class="links">
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="#">Home</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a
+            href="#projects">Projects</a></div> <!-- Added #projects -->
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#skills">Skills</a>
         </div>
-    </header>
-    
-    
-    
-    <section id="about" style="background-color: #f8f9fa;">
-        <div class="container">
-            <h2 class="text-center" style="text-shadow: 5px 5px 5px rgba(24, 16, 16, 0.5); ">About Me</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="panda.jpg" alt="Profile Picture" class="img-fluid rounded-circle mb-4">
-                </div>
-                <div class="col-md-6">
-                    <p class="lead" >Hi there! I'm Karina Lama, a passionate web developer.</p>
-                    <p> I love to explore new technologies and experiment with AI projects in my free time.</p>
-                    
-                    <p>Feel free to explore my portfolio and don't hesitate to reach out if you have any questions or collaboration opportunities!</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a
+            href="#contact">Contact</a></div>
 
-    <section id="portfolio">
-        <div class="container">
-            <h1 class="text-center" style="text-shadow: 4px 4px 4px rgba(24, 16, 16, 0.5);">Portfolio</h1>
-            <h1 class="text-center">College Projects </h1>
-                <p class="text-center"><b>HAMRO GADHI</b></p>
-            <p class="text-center" style="text-align: justify;">Implemented an automated vehicle rental system using PHP for the middle layer tasks, backend (database) supported by HTML, PHP, and JavaScript for the frontend. This replaced manual processes with an efficient online platform accessible for customers for reservations and walk-in users, while enabling admin control for inventory management. The utilization of PHP, HTML, and JavaScript allowed for enhanced customer satisfaction, reduced operational cost.</p>
-            <p class="text-center"><b>Mobile Weather App</b></p>
-            <p class="text-center" style="text-align: justify;">This mobile weather app, developed using JavaScript and powered by open API keys, offers users the convenience of searching for weather information by city name or coordinates, providing accurate temperature and weather forecasts for their chosen locations. With a user-friendly interface, the app ensures users are well-prepared for their day ahead, making it a go-to tool for accessing up-to-date weather data with ease.</p>
-            <p class="text-center"><b>PlaceFinder</b></p>
-            <p class="text-center" style="text-align: justify;">A user-centric recommendation system using advanced machine learning techniques and content-based filtering. This system leverages user preferences and historical data to provide personalized destination suggestions, enhancing user experiences. By analyzing past search history it continually refines recommendations over time. Utilized PHP for middle layer, connecting the fronted (HTML,CSS,JavaScript) and backend(database),to deliver accurate and tailored suggestion, ultimately reducing user attrition.</p>
-        </div>
-    </section>
+      </div>
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+    <div class="dropdown">
+      <div class="links">
+        <a href="">Home</a>
+        <a href="#projects">Projects</a> <!-- Added #projects -->
+        <a href="">Skills</a>
+        <a href="">Contact Us</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
 
-    <section id="contact">
-        <div class="container">
-            <h2 class="text-center" style="text-shadow: 4px 4px 4px rgba(24, 16, 16, 0.5);">Contact Me</h2>
-            <p class="text-center" style="margin-bottom: 20px;">
-                <i class="fas fa-envelope"></i> Email: karinalama111@gmail.com<br><br>
-                <i class="fas fa-phone"></i> Phone: +977-xxxxxxxxxx<br>
-                <a href="https://github.com/KarinaLama" class="btn btn-light btn-lg mt-3">
-                    <i class="fab fa-github"></i> Visit my GitHub Profile
-                </a>
-            </p>
+  <section class="main-section">
+    <div class="main-container">
+      <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+        <img src="assets/profile.jpeg" alt="Karina Lama">
+      </div>
+      <div class="content">
+        <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Hey, I'm <span>Karina</span></h1>
+        <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">I'm a BCA Graduate
         </div>
-    </section>
-    
-
-    <footer>
-        <div class="container">
-            &copy; Karina Lama
+        <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">A BCA graduate passionate about blending
+          creativity and technology to build impactful solutions. I specialize in web development and innovative
+          problem-solving.
+          <br> I believe in continuous learning and aim to contribute to projects that make a difference. Let’s create
+          something extraordinary together!
+        </p>
+        <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+          <a href="https://github.com/KarinaLama" aria-label="GitHub" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/karina-tamang-3bb916293/" aria-label="LinkedIn" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
         </div>
-    </footer>
+        <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
+          <button onclick="openCV()">My CV</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Projects Section -->
+  <section id="projects" class="projects-container">
+    <h2>College Projects</h2>
+
+    <div class="project-card">
+      <h3>HAMRO GADHI</h3>
+      <p>Implemented an automated vehicle rental system using PHP for the middle layer tasks, backend (database)
+        supported by HTML, PHP, and JavaScript for the frontend. This replaced manual processes with an efficient online
+        platform accessible for customers for reservations and walk-in users, while enabling admin control for inventory
+        management. The utilization of PHP, HTML, and JavaScript allowed for enhanced customer satisfaction, reduced
+        operational cost.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Mobile Weather App</h3>
+      <p>This mobile weather app, developed using JavaScript and powered by open API keys, offers users the convenience
+        of searching for weather information by city name or coordinates, providing accurate temperature and weather
+        forecasts for their chosen locations. With a user-friendly interface, the app ensures users are well-prepared
+        for their day ahead, making it a go-to tool for accessing up-to-date weather data with ease.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>PlaceFinder</h3>
+      <p>A user-centric recommendation system using advanced machine learning techniques and content-based filtering.
+        This system leverages user preferences and historical data to provide personalized destination suggestions,
+        enhancing user experiences. By analyzing past search history, it continually refines recommendations over time.
+        Utilized PHP for the middle layer, connecting the frontend (HTML, CSS, JavaScript) and backend (database), to
+        deliver accurate and tailored suggestions, ultimately reducing user attrition.</p>
+    </div>
+
+    <!-- Second-Hand Car Price Prediction System -->
+    <div class="project-card">
+      <h3>Second-Hand Car Price Prediction System</h3>
+      <p>This project uses Linear Regression and Gradient Boosting algorithms to predict the price of second-hand cars.
+        The system takes into account various features like car make, year, mileage, engine specifications, and other
+        factors, providing an accurate price estimate. Developed with Flask for the web framework, the project
+        integrates a database for storing car details, and allows users to upload car images along with the car's
+        features. The system also includes a recommendation feature to suggest similar cars based on user preferences.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills" class="skills-section">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill-card" id="php">
+        <i class="fab fa-php"></i>
+        <h3>PHP</h3>
+        <p>PHP is a widely-used open-source scripting language especially suited for web development. I have experience
+          building dynamic websites and web applications using PHP as the backend language, ensuring seamless data
+          processing and interaction with databases.</p>
+      </div>
+
+      <div class="skill-card" id="javascript">
+        <i class="fab fa-js-square"></i>
+        <h3>JavaScript</h3>
+        <p>JavaScript is a core technology of the web used for adding interactive behaviors to websites. I have hands-on
+          experience with vanilla JavaScript and popular libraries like jQuery, enhancing web interfaces and adding
+          dynamic functionality.</p>
+      </div>
+
+      <div class="skill-card" id="sql">
+        <i class="fas fa-database"></i>
+        <h3>SQL</h3>
+        <p>I am proficient in SQL, using it to query, manage, and manipulate relational databases. I can design and
+          optimize database schemas, as well as perform complex queries to retrieve and manipulate data efficiently.</p>
+      </div>
+
+      <div class="skill-card" id="reactjs">
+        <i class="fab fa-react"></i>
+        <h3>ReactJS</h3>
+        <p>ReactJS is a JavaScript library for building user interfaces, and I have experience creating single-page
+          applications (SPAs) with React. I am familiar with JSX, components, state management, and the React ecosystem
+          for efficient web app development.</p>
+      </div>
+
+      <div class="skill-card" id="laravel">
+        <i class="fab fa-laravel"></i>
+        <h3>Laravel</h3>
+        <p>Laravel is a PHP framework for web application development. I have experience using Laravel for building
+          scalable, secure, and maintainable web applications, utilizing its powerful features like routing, middleware,
+          and ORM for database management.</p>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact-section">
+    <div class="Contact">
+      <h2 class="text-center" style="text-shadow: 4px 4px 4px rgba(24, 16, 16, 0.5);">Contact Me</h2>
+      <p class="text-center" style="margin-bottom: 20px;">
+      <h5><i class="fas fa-envelope"></i> Email: karinalama111@gmail.com</h5><br>
+      <h5><i class="fas fa-phone"></i> Phone: +977-xxxxxxxxxx</h5><br>
+      <a href="https://github.com/KarinaLama" class="btn btn-light btn-lg mt-3">
+        <i class="fab fa-github"></i> Visit my GitHub Profile
+      </a>
+      </p>
+    </div>
+  </section>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+  </script>
+
+  <script>
+    function hamburg() {
+      const navbar = document.querySelector(".dropdown")
+      navbar.style.transform = "translateY(0px)"
+    }
+    function cancel() {
+      const navbar = document.querySelector(".dropdown")
+      navbar.style.transform = "translateY(-500px)"
+    }
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    function openCV() {
+      window.open('cv.pdf', '_blank'); // Replace with the correct path to your JPEG file
+    }
+
+  </script>
 </body>
+
 </html>
