@@ -240,6 +240,7 @@ section{
     .main-container{
         display: flex;
         flex-direction: column;
+        margin-bottom: 1000px;
     }
     .nav-container .links{
         display: none;
@@ -260,17 +261,16 @@ section{
     }
     .main-container .image{
         width: 80%;
-        margin-bottom: 0px;
     }
 }
 
 /* Projects Section */
 .projects-container {
-
   padding: 50px 10%; /* Add padding to create space from the edges */
   color: #333; /* Dark text color for readability */
   min-height: 60vh; /* Ensure the section takes up enough space */
-}
+  position: relative;
+  margin-top: -10%;}
 
 .projects-container h2 {
   text-align: center;
@@ -320,28 +320,35 @@ section{
   text-decoration: underline; /* Underline on hover */
 }
 
-@media screen and (max-width: 768px) {
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 884px) {
   .projects-container {
-      padding: 50px 5%; /* Less padding on smaller screens */
+    padding: 50px 5%; /* Adjust padding for smaller screens */
+    margin-top: 60px; /* Adjust top margin for smaller screens */
+    /* Adjust to use a smaller margin-top value */
+    position: relative; /* Ensure positioning context */
   }
 
   .project-card {
-      padding: 15px; /* Less padding on smaller screens */
+    padding: 15px; /* Less padding on smaller screens */
   }
 
   .projects-container h2 {
-      font-size: 28px; /* Smaller title size on mobile */
+    font-size: 28px; /* Smaller title size on mobile */
   }
 
   .project-card h3 {
-      font-size: 24px; /* Smaller title size on mobile */
+    font-size: 24px; /* Smaller title size on mobile */
   }
 }
+
 /* Skills Section */
 .skills-section {
   padding: 50px 10%;
   color: #333;
   min-height: 60vh;
+  margin-top: 30%;
+
 }
 
 .skills-section h2 {
@@ -396,6 +403,8 @@ section{
 @media screen and (max-width: 768px) {
   .skills-section {
       padding: 50px 5%;
+      margin-top: 100%;
+      position: relative;
   }
 
   .skill-card {
@@ -414,7 +423,9 @@ section{
 /* Contact Section */
 .contact-section {
   padding: 60px 0; /* Add top and bottom padding */
-  text-align: center; /* Center the content */
+  text-align: center;
+  margin-top: 50%;
+  /* Center the content */
 }
 
 .contact-section h2 {
@@ -449,7 +460,6 @@ section{
 
 .contact-section h5{
   margin-right: 10px; /* Space between the icon and the text */
-  color:#b74b4b ;
 }
 
 .contact-section .text-center {
@@ -498,4 +508,14 @@ section{
 .contact-section .btn-light:hover {
   background-color: #e2e6ea; /* Darker background on hover */
   color: #b74b4b; /* Change text color on hover */
+}
+
+@media screen and (max-width: 768px) {
+  .contact-section {
+      padding: 50px 5%;
+      margin-top: 140%;
+      position: relative;
+  }
+
+  
 }
